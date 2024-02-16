@@ -44,6 +44,11 @@ public class LibrosController {
         return librosServices.getLibrosbyIsbn(isbn);
     }
 
+    @GetMapping("/anio/{anio}")
+    public List<Libros> getByAnio(@PathVariable("anio") Integer anio ) {
+        return librosServices.findByAnioGreaterThan(anio);
+    }
+
     @GetMapping("/titulo/{titulo}")
     public List<Libros> getByTitutlo(@PathVariable("titulo") String titulo ) {
         return librosServices.getLibrosTitulo(titulo);

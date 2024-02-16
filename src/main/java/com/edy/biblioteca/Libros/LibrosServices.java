@@ -33,6 +33,12 @@ public class LibrosServices {
         return librosRepository.findByIsbn(isbn);
     }
 
+    //trae libros mayopres al año escrito 
+    public List<Libros> findByAnioGreaterThan(Integer anio){
+        
+        return librosRepository.findByAnioGreaterThan(anio);
+    }
+
     //trae los un libro por su titulo
     public List<Libros> getLibrosTitulo(String Titulo){
         
